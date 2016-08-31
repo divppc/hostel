@@ -6,5 +6,78 @@
   <title>Волжский | Главная</title>
 </head>
 <body>
-  <h1>ку</h1>
+  <header>
+    <div class="wrap">
+      <div class="top-line">
+        <div class="logo"><a href="/">Логотип</a></div>
+        <div class="top-phone">
+          <div>8 (917) 509-50-50</div><span>г. Москва, Волжский бульвар,<br>  дом 37, корпус 1</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О хостеле</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Преимущества</a></li>
+            <li><a href="#">Комнаты</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul><a href="#" class="cb">Вам перезвонить?</a>
+        </nav>
+      </div>
+      <div class="main-line">
+        <div class="main-title">
+          <div class="slogan">
+            <div>Хостел «Волжский»</div><span>- здесь можно переночевать!</span>
+          </div>
+          <p>
+            Здесь общий текст о хостеле — это некий симбиоз европейских 
+            апартаментов, русских доходных домов и американских 
+            мотелей, которые ещё сотни лет назад предлагали непри
+            вередливым путешественникам недорогое место для 
+            ночёвки.Первый хостел в сегодняшнем значении этого 
+            слова был основан в начале
+          </p>
+          <div class="common-price">Стоимость комнаты:<br>  от <b>180</b> до <b>250</b> руб</div>
+        </div>
+        <div class="main-form">
+          <div class="title">Забронировать место</div>
+          <form action="mail.php">
+            <div class="form-field">
+              <div class="field-name">Ваше имя:</div>
+              <div class="field-input">
+                <input type="text" placeholder="Константин" required="required" class="type-input"/>
+              </div>
+            </div>
+            <div class="form-field">
+              <div class="field-name">Ваш тел:</div>
+              <div class="field-input">
+                <input type="text" placeholder="+7 (495) 324-65-90" required="required" class="type-input"/>
+              </div>
+            </div>
+            <div class="form-field">
+              <div class="field-name">Кол-во человек:</div>
+              <div class="field-input">
+                <select name="guest-count">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <div class="field-name">Время пребывания:</div>
+              <div class="field-input">
+                <input type="text" class="date-range"/>
+                <input type="text" class="date-range"/>
+              </div>
+            </div>
+            <div class="form-field">
+              <input type="submit" value="Оставить заявочку" class="send-btn"/><span>Мы вам перезвоним и уточним все нюансы</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
 </body>

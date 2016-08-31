@@ -1,43 +1,18 @@
 @import 'nib'
-
-@font-face {
-	font-family: "ProximaLight";
-	src: url("../fonts/proxima/proximanova-light.otf") format("opentype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "Proxima";
-	src: url("../fonts/proxima/proximanova-regular.otf") format("opentype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "ProximaBold";
-	src: url("../fonts/proxima/ProximaNova-Bold.ttf") format("truetype"),
-		 url("../fonts/proxima/proximanova-bold.otf") format("opentype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "ProximaSemiBold";
-	src: url("../fonts/proxima/proximanova-semibold.otf") format("opentype");
-	font-style: normal;
-	font-weight: normal;
-}
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,900&subset=cyrillic';
+//font-family: 'Roboto', sans-serif;
+@import 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700&subset=cyrillic';
+//font-family: 'PT Serif', serif;
 
 *
 	box-sizing border-box
 .clearfix
-	clearfix()
-html
-	position relative
-	height 100%	          
+	clearfix()          
 body
-	// font-family: "ProximaBold";
-	font 16px Georgia, sans-serif
-	color #353535
-	background #f9f4f0
+	font-family 'PT Serif', serif
+	color #000
+	font-size 17px
+	background #fff
 	position relative
 	max-width 1920px
 	min-width 320px
@@ -50,3 +25,156 @@ a
 	text-decoration none
 img
 	max-width 100%
+.wrap
+	width 88.5%
+	margin 0 auto
+	clearfix()
+header
+	background url("../images/main-bg.png") no-repeat 100% 15% / contain
+.top-line
+	clearfix()
+	padding-top 35px
+	.logo
+		float left
+		a
+			font-size 30px
+			color #6b6b6b
+	nav
+		text-align center
+		padding-top 12px
+		ul
+			display inline-block
+			padding 0
+			margin 0
+			li
+				list-style-type none
+				display inline-block
+				a
+					font-size 15px
+					color #000
+					padding 0 7%
+					transition 0.3s
+					font-family: 'Roboto', sans-serif;
+					&:hover
+						color #e9366c
+						text-decoration underline
+		a.cb
+			color #40bc98
+			font-size 17px
+			border-bottom 1px dashed #40bc98
+			margin-left 3.4%
+			&:hover
+				border-bottom 0
+	.top-phone
+		float right
+		div
+			font-weight 700
+			font-size 30px
+			margin-bottom 5px
+		span
+			font-style italic
+			color #686868
+.main-line
+	padding-top 70px
+	clearfix()
+	.main-title
+		float left
+		max-width 32%
+		position relative
+		.slogan
+			margin-bottom 40px
+			div
+				font-size 60px
+			span
+				font-style italic
+				font-size 33px
+				color #6b6b6b
+		p
+			color #7f7f7f
+			font-style italic
+			margin 0
+		.common-price
+			margin-top 30px
+			font-style italic
+			font-size 25px
+			b
+				color #e9366c
+		&:after
+			display block
+			content url("../images/man.png")
+			position absolute
+			top -50px
+			right -90%
+	.main-form
+		float right
+		width 537px
+		height 462px
+		background #f7f7f7
+		border 1px solid #e8e8e8
+		border-radius 5px
+		z-index 2
+		position relative
+		padding 30px 35px
+		.title
+			font-size 25px
+		form
+			display block
+			margin 20px 0
+			.form-field
+				clearfix()
+				&:not(:last-child)
+					margin-bottom 10px
+				&:last-child
+					padding-left 155px
+				.field-name
+					float left
+					width 155px
+					font-size 15px
+					color #5f5f5f
+					text-align right
+					padding-right 12px
+					line-height 44px
+				.field-input
+					float left
+					width 293px
+					input,
+					select
+						display block
+						height 44px
+						background #fff
+						border-radius 2px
+						outline none
+						border 1px solid #cbcbcb
+						padding-left 15px
+					input.type-input						
+						width 100%
+					input.date-range
+						float left
+						width 142px
+						&:first-child
+							margin-right 9px
+					select
+						width 142px
+						-webkit-appearance none
+						background url("../images/select-arrow.png") no-repeat 90% center, #fff
+				input.send-btn
+					width 178px
+					height 41px
+					line-height 40px
+					border-radius 5px
+					background #e9366c
+					text-align center
+					cursor pointer
+					transition 0.3s
+					font-size 14.26px
+					font-family: 'Roboto', sans-serif;
+					font-weight 900
+					border none
+					color #fff
+					display block
+					margin 15px 0 20px 0
+					&:hover
+						background #b71d4c
+					&+span
+						font-style italic
+						color #686868

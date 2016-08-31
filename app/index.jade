@@ -5,4 +5,69 @@ head
 	link(rel="stylesheet", href="css/style.css")
 	title Волжский | Главная
 body
-	h1 ку
+	header
+		.wrap
+			.top-line
+				.logo
+					a(href="/") Логотип
+				.top-phone
+					div 8 (917) 509-50-50
+					span.
+						г. Москва, Волжский бульвар,<br>  дом 37, корпус 1
+				nav
+					ul
+						li
+							a(href="#") Главная
+						li
+							a(href="#") О хостеле
+						li
+							a(href="#") Галерея
+						li
+							a(href="#") Преимущества
+						li
+							a(href="#") Комнаты
+						li
+							a(href="#") Контакты
+					a(href="#" class="cb") Вам перезвонить?
+			.main-line
+				.main-title
+					.slogan
+						div Хостел «Волжский»
+						span - здесь можно переночевать!
+					p.
+						Здесь общий текст о хостеле — это некий симбиоз европейских 
+						апартаментов, русских доходных домов и американских 
+						мотелей, которые ещё сотни лет назад предлагали непри
+						вередливым путешественникам недорогое место для 
+						ночёвки.Первый хостел в сегодняшнем значении этого 
+						слова был основан в начале
+					.common-price.
+						Стоимость комнаты:<br>  от <b>180</b> до <b>250</b> руб
+				.main-form
+					.title Забронировать место
+					form(action="mail.php")
+						.form-field
+							.field-name Ваше имя:
+							.field-input
+								input(type="text" placeholder="Константин" class="type-input" required)
+						.form-field
+							.field-name Ваш тел:
+							.field-input
+								input(type="text" placeholder="+7 (495) 324-65-90" class="type-input" required)
+						.form-field
+							.field-name Кол-во человек:
+							.field-input
+								select(name="guest-count")
+									option(value="1") 1
+									option(value="2") 2
+									option(value="3") 3
+									option(value="4") 4
+						.form-field
+							.field-name Время пребывания:
+							.field-input
+								input(type="text" class="date-range")
+								input(type="text" class="date-range")
+						.form-field
+							input(type="submit" class="send-btn" value="Оставить заявочку")
+							span.
+								Мы вам перезвоним и уточним все нюансы
