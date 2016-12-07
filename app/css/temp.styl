@@ -30,14 +30,18 @@ h1,h2,h3,h4,h5,h6
 	margin 0
 	
 .wrap
-	width 88.5%
+	width 89.5%
 	margin 0 auto
 	clearfix()
 header
 	background url("../images/main-bg.png") no-repeat 100% 15% / contain
+	&.inner
+		background none
 .top-line
 	clearfix()
 	padding-top 35px
+	.mobile-menu
+		display none
 	.logo
 		float left
 		a
@@ -46,6 +50,8 @@ header
 	nav
 		text-align center
 		padding-top 12px
+		.close-nav
+			display none
 		ul
 			display inline-block
 			padding 0
@@ -56,7 +62,7 @@ header
 				a
 					font-size 15px
 					color #000
-					padding 0 7%
+					padding 0 10px
 					transition 0.3s
 					font-family: 'Roboto', sans-serif;
 					&:hover
@@ -113,7 +119,7 @@ header
 	.main-form
 		float right
 		width 537px
-		height 462px
+		// height 462px
 		background #f7f7f7
 		border 1px solid #e8e8e8
 		border-radius 5px
@@ -151,6 +157,7 @@ header
 						outline none
 						border 1px solid #cbcbcb
 						padding-left 15px
+						-moz-appearance: none;
 					input.type-input						
 						width 100%
 					input.date-range
@@ -178,6 +185,7 @@ header
 					color #fff
 					display block
 					margin 15px 0 20px 0
+					appearance none
 					&:hover
 						background #b71d4c
 					&+span
@@ -255,27 +263,26 @@ section.work-stat
 			padding-left 29%
 			b
 				color #e9366c
-section.advantages
-	.wrap
-		.adv-line
-			clearfix()
-			margin-bottom 30px
-			.adv-item
-				position relative
-				width 20%
-				float left
-				text-align center
-				padding-top 90px
-				img
-					display block
-					position absolute
-					top 0
-					left 50%
-					transform translateX(-50%)
-				div
-					color #515151
-					max-width 165px
-					margin 0 auto
+
+.adv-line
+	clearfix()
+	margin-bottom 30px
+	.adv-item
+		position relative
+		width 20%
+		float left
+		text-align center
+		padding-top 90px
+		img
+			display block
+			position absolute
+			top 0
+			left 50%
+			transform translateX(-50%)
+		div
+			color #515151
+			max-width 165px
+			margin 0 auto
 .more-btn
 	text-align center
 	position relative
@@ -330,38 +337,43 @@ section.hostel-photos
 				&:hover
 					.photo-description
 						bottom 0
-				.photo-description
-					position absolute
-					bottom -100%
-					left 0
-					width 100%
-					height 100%
-					padding 45% 5% 0
-					background rgba(0,0,0,.5)
-					transition 0.5s
-					.room-type
-						font-style italic
-						color #fff
-						display inline-block
-						border-bottom 1px solid #a6b8b6
-					.room-price
-						font-weight 700
-						font-style italic
-						color #e9366c
-						margin-top 5px
-						margin-bottom 10px
-					a
-						font-size 14.26px
-						color #fff
-						cursor pointer
-						transition 0.3s
-						border-radius 5px
-						background #e9366c
-						font-family 'Roboto', sans-serif
-						font-weight 400
-						padding 2% 5%
-						&:hover
-							background #b71d4c
+.photo-description
+	position absolute
+	bottom -100%
+	left 0
+	width 100%
+	height 100%
+	// padding 45% 5% 0
+	background rgba(0,0,0,.5)
+	transition 0.5s
+	.descriptiona-data
+		position absolute
+		left 5%		
+		width 90%
+		bottom 10%
+		.room-type
+			font-style italic
+			color #fff
+			display inline-block
+			border-bottom 1px solid #a6b8b6
+		.room-price
+			font-weight 700
+			font-style italic
+			color #e9366c
+			margin-top 5px
+			margin-bottom 10px
+		a
+			font-size 14.26px
+			color #fff
+			cursor pointer
+			transition 0.3s
+			border-radius 5px
+			background #e9366c
+			font-family 'Roboto', sans-serif
+			font-weight 400
+			padding 2% 5%
+			&:hover
+				background #b71d4c
 section.response
 	.response-wrap
 		padding 80px 0
@@ -446,6 +458,8 @@ footer
 				.location
 					font-style italic
 					color #686868
+				a
+					color #000
 section.breadcrumbs
 	.wrap
 		.nav-links
@@ -467,10 +481,10 @@ section.breadcrumbs
 						margin 0 5px
 						color #000
 						text-decoration none
-section.rooms
+section.content
 	.wrap
 		h1
-			margin 70px 0 40px 0
+			margin 60px 0 40px 0
 			font-size 60px
 		.rooms-container
 			padding-left 100px
@@ -486,6 +500,7 @@ section.rooms
 				.room-data
 					clearfix()
 					.about-room
+						max-width 90%
 						float left
 						clearfix()
 						.room-preview
@@ -495,6 +510,8 @@ section.rooms
 							img
 								display block
 								width 100%
+							a.all-photos
+								display none
 						.room-equip
 							float left
 							margin-right 75px
@@ -586,11 +603,582 @@ section.rooms
 										color #686868
 					.room-status
 						margin-top 45px
-						float left
+						float right
+						max-width 10%
 						div
 							padding-top 70px
 							max-width 140px
 						.open
-							background url("../images/open-tag.png") no-repeat left top	
-				
-					
+							background url("../images/open-tag.png") no-repeat left top
+						.close
+							background url("../images/close-tag.png") no-repeat left top	
+		
+		.callback-info
+			padding-top 50px
+			margin-bottom 110px
+			text-align center
+			div:first-child
+				font-size 33px
+				color #909090
+			div:nth-child(2)
+				font-size 59px
+				color #000
+			div:nth-child(3)
+				font-size 33px	
+		.adv-line			
+			max-width 1400px
+			margin 0 auto 50px
+		.more-advantages
+			max-width 50%
+			position relative
+			margin-bottom 60px
+			&+img
+				display none
+			&:after
+				display block
+				content url("../images/girl.png")
+				position absolute
+				top 50px
+				right -90%
+			div
+				font-size 59.80px
+				color #000
+				margin-bottom 50px
+			ul
+				padding 0
+				margin 0
+				li
+					list-style-type none
+					padding-left 20px
+					font-style italic
+					font-size 20px
+					position relative
+					&:not(:last-child)
+						margin-bottom 25px
+					&:before
+						display block
+						content ''
+						background #e9366c
+						width 13px
+						height 13px
+						-webkit-border-radius 7px 6px 6px 7px/7px 7px 6px 6px
+						position absolute
+						top 8px
+						left 0	
+		article
+			padding-left 5vw
+			max-width 1160px
+			.subtitle
+				font-size 25px
+				color #000
+				margin-bottom 10px
+			p
+				color #7f7f7f
+				font-size 17px
+				font-style italic
+				margin 0 0 30px 0
+			figure
+				margin 0 0 35px 0
+				figcaption
+					font-size 17px
+					color #000
+					font-style italic
+		.rooms-slider
+			position relative
+			margin-bottom 60px
+			.slider-name
+				font-style italic
+				color #000
+				margin-bottom 10px
+			.slider-nav
+				.left-arrow,
+				.right-arrow
+					position absolute
+					cursor pointer
+					top 54%
+					width 11px
+					height 19px
+				.left-arrow
+					background url("../images/slider-arrows.png") no-repeat 0px 0px
+					left -40px
+				.right-arrow
+					background url("../images/slider-arrows.png") no-repeat 0px -19px
+					right -40px
+			.slider-wrap
+				position relative
+				clearfix()
+				.slider-item
+					overflow hidden
+					float left
+					// max-width 33.25%
+					img
+						display block
+					&:not(:last-child)
+						margin-right 1px
+					.item
+						position relative
+						&:not(:last-child)
+							margin-bottom 1px
+						.photo-description
+							bottom -101%
+						&:hover
+							.photo-description
+								bottom 0
+		.contacts-data
+			clearfix()
+			width 76%
+			margin 0 auto
+			.data-item
+				max-width 35%
+				float left
+				&:not(:first-child)
+					min-height 122px
+				&:not(:last-child)
+					margin-right 50px
+				div
+					font-size 25px
+					color #000
+				p
+					margin 0 0 10px 0
+					font-style italic
+					color #7f7f7f
+		.map-container
+			padding 0 12%
+			background url("../images/left-hand.png") no-repeat 6.3% 100%, url("../images/right-hand.png") no-repeat 93% 100%
+			background-size 12%
+			margin 0 auto
+			padding-bottom 80px
+			position relative
+			// &:before,
+			// &:after
+			// 	display block
+			// 	content url("../images/left-hand.png")
+			// 	position absolute
+			// 	bottom -5px
+			// &:before
+			// 	content url("../images/left-hand.png")
+			// 	left -8.3%
+			// &:after				
+			// 	content url("../images/right-hand.png")				
+			// 	right -7.8%
+			.title
+				font-size 25px
+				color #000
+				margin-bottom 15px
+			.map
+				padding 15px
+				border 5px solid #000
+				border-radius 3px
+				z-index -1
+				position relative
+.popup
+	display none
+	width 100%
+	text-align center
+	padding 105px 0
+	position absolute
+	top 0
+	left 0
+	z-index 10
+	background rgba(#a8e5c4, .95)
+	.close-btn
+		position absolute
+		top 30px
+		right 30px
+		cursor pointer
+	.callback-modal
+		display inline-block
+		margin 0 auto
+		padding 35px 50px
+		border-radius 5px
+		background #f7f7f7
+		box-shadow 0 23px 38px rgba(75,130,100,.81)
+		border solid 1px #e8e8e8
+		z-index 10
+		&>div
+			font-size 25px
+			color #000
+			text-align center		
+			margin-bottom 30px
+		.callback-form
+			.form-field
+				clearfix()
+				&:first-child
+					margin-bottom 10px
+				&:nth-child(2)
+					margin-bottom 27px
+				&:nth-child(3)
+					padding-left 140px
+				&>div
+					width 140px
+					float left
+					text-align right
+					padding-right 12px
+					line-height 44px
+					font-size 15px
+					color #5f5f5f
+				input[type="text"]
+					display block
+					float left
+					width 293px
+					height 44px
+					background #fff
+					outline none
+					border-radius 2px
+					border 1px solid #cbcbcb
+					font-size 17px
+					color #000
+					padding 0 15px
+				input[type='submit']
+					-moz-appearance: none;
+					width 178px
+					height 41px
+					line-height 40px
+					border-radius 5px
+					background #e9366c
+					text-align center
+					cursor pointer
+					transition 0.3s
+					font-size 14.26px
+					font-family: 'Roboto', sans-serif;
+					font-weight 900
+					border none
+					color #fff
+					display block
+					-webkit-appearance none
+					&:hover
+						background #b71d4c
+					&+span
+						font-style italic
+						color #686868
+						font-size 17px
+@media screen and (max-width: 1890px)
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info
+		float left
+		margin-right 35px		
+		padding-right 10%
+		margin-bottom 0
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info + .room-price
+		float left
+		margin-top 70px
+	section.content .wrap .rooms-container .room .room-data .about-room .room-equip
+		margin-right 0
+@media screen and (max-width: 1440px)
+	.main-line .main-title
+		max-width 40%
+	.main-line .main-title .slogan h1
+		font-size 52px
+	.main-line .main-title:after
+		right -60%
+	section.content .wrap .more-advantages
+		max-width 55%
+	section.content .wrap .more-advantages:after
+		right -80%
+	section.content .wrap .more-advantages ul li:not(:last-child)
+		margin-bottom 20px
+@media screen and (max-width: 1365px)
+	.wrap
+		width 94%
+	.main-line .main-title:after
+		display none
+	.main-line .main-title .slogan
+		margin-bottom 20px
+	.main-line .main-title .slogan h1
+		font-size 38px
+	.main-line .main-title .slogan span
+		font-size 28px
+		line-height 24px
+	section.open-rooms .wrap .room-types
+		width 100%
+	section.open-rooms .wrap .room-types .room-item .places
+		font-size 28px
+	section.open-rooms .wrap .room-types .room-item .places-count
+		font-size 14px
+	section.work-stat .wrap .stat
+		padding-left 0
+		text-align center
+	.top-line nav ul li a
+		font-size 14px
+		padding 0 5px
+	.top-line nav a.cb
+		font-size 12px
+	.top-line .top-phone div
+		font-size 22px
+	.top-line .top-phone span
+		font-size 14px
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info
+		margin-right 25px
+		padding-top 0
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info + .room-price
+		margin-top 20px
+	section.content .wrap .rooms-slider .slider-nav .left-arrow
+		left -15px
+	section.content .wrap .rooms-slider .slider-nav .right-arrow
+		right -15px
+@media screen and (max-width: 1280px)
+	section.content .wrap .rooms-container .room .room-data .about-room .room-preview,
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info
+		width 350px
+	section.content .wrap .rooms-container .room .room-data .about-room .room-equip ul li:not(:last-child)
+		margin-bottom 0
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info
+		margin-right 0
+	section.content .wrap .rooms-container .room .room-data .about-room .info .room-price .price span
+		font-size 20px
+	section.content .wrap .rooms-container .room .room-data .about-room .info .room-price .price b
+		font-size 23px
+	section.content .wrap .rooms-container .room .room-data .about-room .info .room-price .order-room span
+		font-size 14px
+		display block
+	section.content .wrap .more-advantages:after
+		right -84%
+	section.content .wrap .more-advantages ul li:not(:last-child)
+		margin-bottom 15px
+	section.content .wrap .contacts-data .data-item
+		max-width 70%
+	section.content .wrap .contacts-data .data-item a
+		color #000
+@media screen and (max-width: 1023px)
+	section.breadcrumbs,
+	.top-line .top-phone span,
+	.main-line .main-title p,
+	.main-line .main-title .common-price,
+	section.open-rooms .wrap .open-rooms-title:after,
+	section.work-stat .wrap .title,
+	section.hostel-photos .wrap .photos-line .item-photo:nth-child(5),
+	section.response .response-wrap .response-slider .response-item .response-container .response-data .date,
+	section.content .wrap .callback-info
+		display none
+	.wrap
+		width 96%
+	.top-line
+		text-align center
+		padding 20px 20px 0
+	.top-line div,
+	.top-line a
+		color #e9366c
+	.top-line .mobile-menu
+		display block
+		cursor pointer
+		max-width 40px
+		float left
+	.top-line .logo
+		padding-top 70px
+		float none
+	.main-line
+		padding-top 20px
+	.main-line .main-title
+		max-width 100%
+		text-align center
+		float none
+	.main-line .main-form
+		width 100%
+	section.open-rooms
+		margin-top 30px
+	section.open-rooms .wrap
+		padding-bottom 20px
+	section.open-rooms .wrap .open-rooms-title div
+		text-align center
+		float none
+	section.open-rooms .wrap .room-types
+		margin 30px auto 0
+	section.open-rooms .wrap .room-types .room-item
+		max-width 250px
+		width auto
+		float none
+		margin 0 auto 20px
+	section.open-rooms .wrap .room-types .room-item .places
+		padding-top 5px
+	section.open-rooms .wrap .room-types .room-item .places-type
+		font-size 40px
+	section.open-rooms .wrap .room-types .room-item .places-type
+		left 25px
+		transform translateX(-100%)
+	section.open-rooms .wrap .room-types .room-item:last-child
+		padding-left 45px
+	section.work-stat
+		margin-bottom 50px
+		padding-bottom 150px
+		background url('../images/bg2.png') no-repeat 50% 50%
+	.adv-line
+		margin-bottom 0
+	.adv-line .adv-item
+		float none
+		width 100%
+		margin 0 auto 30px
+	section.hostel-photos
+		padding-top 35px
+	section.hostel-photos .wrap .photos-line .item-photo
+		width calc(50% - 5px)
+		margin-bottom 5px
+	section.hostel-photos .wrap .photos-line .item-photo:nth-child(odd)
+		margin-right 5px
+	section.response .response-wrap
+		width 90%
+		padding 30px 0
+	section.response .response-wrap h3
+		font-size 33px
+		font-style italic
+	section.response .response-wrap .response-slider
+		padding 40px 0 0 0
+	section.response .response-wrap .response-slider .response-item .author-photo
+		margin-left 80px
+	section.response .response-wrap .response-slider .response-item .response-container .response-data .author
+		font-size 30px
+	section.response .response-wrap .response-slider .response-item .response-container
+		max-width 100%
+	footer .wrap .footer-wrap .footer-mail, footer .wrap .footer-wrap .worktime
+		float none
+		text-align center
+	footer .wrap .footer-wrap
+		text-align center
+	.main-line .main-form form .form-field .field-name
+		text-align left
+	.main-line .main-form
+		padding 10px 15px
+	.main-line .main-form form .form-field:last-child
+		padding-left 0
+	.main-line .main-form form .form-field input.send-btn
+		margin 10px auto
+	section.work-stat .wrap .stat
+		font-size 20px
+	.owl-carousel .owl-controls
+		padding-left 0
+	.top-line nav
+		position fixed
+		display none
+		top 0
+		left 0
+		width 100%
+		height 100%
+		z-index 11
+		background rgba(255,255,255,.95)
+		padding 30px 0 20px
+		text-align center
+		.close-nav
+			width 30px
+			height 30px
+			position absolute
+			top 20px
+			right 20px
+			cursor pointer
+			display block
+		ul
+			display block
+			li
+				display block
+				margin 10px auto
+	section.content .wrap h1
+		margin 20px 0
+		text-align center
+		font-size 40px
+		line-height 38px
+	section.content .wrap .rooms-container
+		padding-left 0
+	section.content .wrap .rooms-container .room .room-type
+		font-size 28px
+		text-align center
+	section.content .wrap .rooms-container .room .room-data .about-room .room-preview,
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info
+		margin 0 auto 20px
+		width 100%
+	section.content .wrap .rooms-container .room .room-data .about-room
+		max-width 100%
+	section.content .wrap .rooms-container .room .room-data .about-room .room-equip
+		float none
+	section.content .wrap .rooms-container .room .room-data .about-room .room-equip ul
+		display block
+		width 100%
+		margin 0 auto 20px
+	section.content .wrap .rooms-container .room .room-data .room-status
+		float left
+		margin-top 20px
+		width 100%
+		max-width 100%
+	section.content .wrap .rooms-container .room .room-data .room-status .open
+		background url('../images/open-tag.png') no-repeat center top		
+		text-align center
+	section.content .wrap .rooms-container .room .room-data .room-status .open
+		text-align center
+	section.content .wrap .rooms-container .room .room-data .room-status .close
+		background url('../images/close-tag.png') no-repeat center top
+		text-align center
+		max-width 100%
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info + .room-price
+		width 100%
+		text-align center
+	section.content .wrap .rooms-container .room .room-data .room-status div
+		max-width 100%
+	section.content .wrap .rooms-container .room .room-data .about-room .info .additional-info + .room-price b
+		display block
+	section.content .wrap .rooms-container .room .room-data .about-room .info .room-price .order-room a
+		max-width 180px
+		margin 0 auto 20px
+		float none
+	section.content .wrap .rooms-container .room .room-data .about-room .info .room-price .order-room span
+		text-align center
+	section.content .wrap .rooms-container .room
+		margin-bottom 50px
+	.main-line .main-form form .form-field .field-input
+		width 100%
+	.main-line .main-form form .form-field .field-input input.date-range
+		width 133px
+	.more-btn .btn-container
+		padding 0
+		max-width 185px
+	section.content .wrap .rooms-container .room .room-data .about-room .room-preview a.all-photos
+		text-align center
+		font-style italic
+		display block
+		margin-top 10px
+		font-size 18px
+		color #e9366c
+		text-decoration underline
+		&:hover
+			text-decoration none
+	section.content .wrap .rooms-slider .slider-name
+		text-align center
+	section.content .wrap .rooms-slider .slider-wrap .slider-item .item .photo-description,
+	section.content .wrap .rooms-slider .slider-nav .left-arrow, section.content .wrap .rooms-slider .slider-nav .right-arrow
+		display none
+	section.content .wrap .more-advantages:after
+		display none
+	section.content .wrap .more-advantages
+		max-width 100%
+		text-align center
+	section.content .wrap .more-advantages div
+		font-size 40px
+		margin-bottom 10px
+	section.content .wrap .more-advantages ul li
+		padding-left 0
+	section.content .wrap .more-advantages ul li:before
+		display none
+	section.content .wrap .more-advantages + img
+		display block
+		margin 10px auto
+	section.content .wrap .contacts-data
+		max-width 90%
+	section.content .wrap .contacts-data .data-item:not(:first-child)
+		min-height auto
+	section.content .wrap .map-container
+		padding 0
+		background none
+	section.content .wrap .map-container .map
+		padding 0
+		border none
+	section.content .wrap .contacts-data .data-item
+		max-width 100%
+	.popup .close-btn
+		width 30px
+	.popup
+		z-index 15
+		padding 70px 0
+	.popup .callback-modal .callback-form .form-field > div
+		text-align left
+		padding-left 0
+	.popup .callback-modal .callback-form .form-field:nth-child(3)
+		padding-left 0
+	.popup .callback-modal
+		padding 10px
+	.popup .callback-modal .callback-form .form-field input[type='text']
+		width 100%

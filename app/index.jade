@@ -2,19 +2,26 @@
 html(lang="ru-en")
 head
 	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+	link(rel="stylesheet", href="css/owl.carousel.css")
+	link(rel="stylesheet", href="css/datedropper.min.css")
 	link(rel="stylesheet", href="css/style.css")
 	title Волжский | Главная
 body
 	header
 		.wrap
 			.top-line
-				.logo
-					a(href="/") Логотип
+				.mobile-menu
+					img(src="images/burger.png", alt="")
 				.top-phone
 					div 8 (917) 509-50-50
 					span.
 						г. Москва, Волжский бульвар,<br>  дом 37, корпус 1
+				.logo
+					a(href="/") Логотип
 				nav
+					.close-nav
+						img(src="images/close-btn.png", alt="")
 					ul
 						li
 							a(href="#") Главная
@@ -65,8 +72,8 @@ body
 						.form-field
 							.field-name Время пребывания:
 							.field-input
-								input(type="text" class="date-range")
-								input(type="text" class="date-range")
+								input(type="text" class="date-range departure")
+								input(type="text" class="date-range departure")
 						.form-field
 							input(type="submit" class="send-btn" value="Оставить заявочку")
 							span.
@@ -134,33 +141,38 @@ body
 				.item-photo
 					img(src="images/hostel-photo1.png", alt="")
 					.photo-description
-						.room-type 10 - ти местный номер
-						.room-price 400 руб/сутки
-						a(href="#") Подробнее
+						.descriptiona-data
+							.room-type 10 - ти местный номер
+							.room-price 400 руб/сутки
+							a(href="#") Подробнее
 				.item-photo
 					img(src="images/hostel-photo2.png", alt="")
 					.photo-description
-						.room-type 10 - ти местный номер
-						.room-price 400 руб/сутки
-						a(href="#") Подробнее
+						.descriptiona-data
+							.room-type 10 - ти местный номер
+							.room-price 400 руб/сутки
+							a(href="#") Подробнее
 				.item-photo
 					img(src="images/hostel-photo3.png", alt="")
 					.photo-description
-						.room-type 10 - ти местный номер
-						.room-price 400 руб/сутки
-						a(href="#") Подробнее
+						.descriptiona-data
+							.room-type 10 - ти местный номер
+							.room-price 400 руб/сутки
+							a(href="#") Подробнее
 				.item-photo
 					img(src="images/hostel-photo4.png", alt="")
 					.photo-description
-						.room-type 10 - ти местный номер
-						.room-price 400 руб/сутки
-						a(href="#") Подробнее
+						.descriptiona-data
+							.room-type 10 - ти местный номер
+							.room-price 400 руб/сутки
+							a(href="#") Подробнее
 				.item-photo
 					img(src="images/hostel-photo5.png", alt="")
 					.photo-description
-						.room-type 10 - ти местный номер
-						.room-price 400 руб/сутки
-						a(href="#") Подробнее
+						.descriptiona-data
+							.room-type 10 - ти местный номер
+							.room-price 400 руб/сутки
+							a(href="#") Подробнее
 			.more-btn
 				.btn-container
 					a(href="#") Смотреть все фото!
@@ -170,6 +182,38 @@ body
 			span.
 				Мы ценим каждого жителя, который поселился в нашем хостеле
 			.response-slider
+				.response-item
+					.author-photo
+						img(src="images/response-photo.png", alt="Виктория Николаева")
+					.response-container
+						.response-data
+							.author Виктория Николаева
+							.date.
+								15 мая, 2016
+						.author-spec Путешественница
+						.response-text.
+							Исторически, хостелы — это некий симбиоз европейских 
+							апартаментов, русских доходных домов и американских 
+							мотелей, которые ещё сотни лет назад предлагали непри
+							вередливым путешественникам недорогое место для 
+							ночёвки.Первый хостел в сегодняшнем значении этого 
+							слова был основан в начале
+				.response-item
+					.author-photo
+						img(src="images/response-photo.png", alt="Виктория Николаева")
+					.response-container
+						.response-data
+							.author Виктория Николаева
+							.date.
+								15 мая, 2016
+						.author-spec Путешественница
+						.response-text.
+							Исторически, хостелы — это некий симбиоз европейских 
+							апартаментов, русских доходных домов и американских 
+							мотелей, которые ещё сотни лет назад предлагали непри
+							вередливым путешественникам недорогое место для 
+							ночёвки.Первый хостел в сегодняшнем значении этого 
+							слова был основан в начале
 				.response-item
 					.author-photo
 						img(src="images/response-photo.png", alt="Виктория Николаева")
@@ -197,4 +241,8 @@ body
 					.phone 8 (917) 509-50-50
 					.location.
 						г. Москва, Волжский бульвар,<br> дом 37, корпус 1
-
+	script(src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous")
+	script(src="js/jquery.fancybox.js")
+	script(src="js/datedropper.min.js")
+	script(src="js/owl.carousel.min.js")
+	script(src="js/main.js")

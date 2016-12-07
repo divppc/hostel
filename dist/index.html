@@ -2,6 +2,9 @@
 <html lang="ru-en"></html>
 <head>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <link rel="stylesheet" href="css/owl.carousel.css"/>
+  <link rel="stylesheet" href="css/datedropper.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <title>Волжский | Главная</title>
 </head>
@@ -9,11 +12,13 @@
   <header>
     <div class="wrap">
       <div class="top-line">
-        <div class="logo"><a href="/">Логотип</a></div>
+        <div class="mobile-menu"><img src="images/burger.png" alt=""/></div>
         <div class="top-phone">
           <div>8 (917) 509-50-50</div><span>г. Москва, Волжский бульвар,<br>  дом 37, корпус 1</span>
         </div>
+        <div class="logo"><a href="/">Логотип</a></div>
         <nav>
+          <div class="close-nav"><img src="images/close-btn.png" alt=""/></div>
           <ul>
             <li><a href="#">Главная</a></li>
             <li><a href="#">О хостеле</a></li>
@@ -68,8 +73,8 @@
             <div class="form-field">
               <div class="field-name">Время пребывания:</div>
               <div class="field-input">
-                <input type="text" class="date-range"/>
-                <input type="text" class="date-range"/>
+                <input type="text" class="date-range departure"/>
+                <input type="text" class="date-range departure"/>
               </div>
             </div>
             <div class="form-field">
@@ -149,32 +154,42 @@
       <div class="photos-line">
         <div class="item-photo"><img src="images/hostel-photo1.png" alt=""/>
           <div class="photo-description">
-            <div class="room-type">10 - ти местный номер</div>
-            <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            <div class="descriptiona-data">
+              <div class="room-type">10 - ти местный номер</div>
+              <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            </div>
           </div>
         </div>
         <div class="item-photo"><img src="images/hostel-photo2.png" alt=""/>
           <div class="photo-description">
-            <div class="room-type">10 - ти местный номер</div>
-            <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            <div class="descriptiona-data">
+              <div class="room-type">10 - ти местный номер</div>
+              <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            </div>
           </div>
         </div>
         <div class="item-photo"><img src="images/hostel-photo3.png" alt=""/>
           <div class="photo-description">
-            <div class="room-type">10 - ти местный номер</div>
-            <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            <div class="descriptiona-data">
+              <div class="room-type">10 - ти местный номер</div>
+              <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            </div>
           </div>
         </div>
         <div class="item-photo"><img src="images/hostel-photo4.png" alt=""/>
           <div class="photo-description">
-            <div class="room-type">10 - ти местный номер</div>
-            <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            <div class="descriptiona-data">
+              <div class="room-type">10 - ти местный номер</div>
+              <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            </div>
           </div>
         </div>
         <div class="item-photo"><img src="images/hostel-photo5.png" alt=""/>
           <div class="photo-description">
-            <div class="room-type">10 - ти местный номер</div>
-            <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            <div class="descriptiona-data">
+              <div class="room-type">10 - ти местный номер</div>
+              <div class="room-price">400 руб/сутки</div><a href="#">Подробнее</a>
+            </div>
           </div>
         </div>
       </div>
@@ -187,6 +202,42 @@
     <div class="response-wrap">
       <h3>Спасибо за ваши отзывы!</h3><span>Мы ценим каждого жителя, который поселился в нашем хостеле</span>
       <div class="response-slider">
+        <div class="response-item">
+          <div class="author-photo"><img src="images/response-photo.png" alt="Виктория Николаева"/></div>
+          <div class="response-container">
+            <div class="response-data">
+              <div class="author">Виктория Николаева</div>
+              <div class="date">15 мая, 2016</div>
+            </div>
+            <div class="author-spec">Путешественница</div>
+            <div class="response-text">
+              Исторически, хостелы — это некий симбиоз европейских 
+              апартаментов, русских доходных домов и американских 
+              мотелей, которые ещё сотни лет назад предлагали непри
+              вередливым путешественникам недорогое место для 
+              ночёвки.Первый хостел в сегодняшнем значении этого 
+              слова был основан в начале
+            </div>
+          </div>
+        </div>
+        <div class="response-item">
+          <div class="author-photo"><img src="images/response-photo.png" alt="Виктория Николаева"/></div>
+          <div class="response-container">
+            <div class="response-data">
+              <div class="author">Виктория Николаева</div>
+              <div class="date">15 мая, 2016</div>
+            </div>
+            <div class="author-spec">Путешественница</div>
+            <div class="response-text">
+              Исторически, хостелы — это некий симбиоз европейских 
+              апартаментов, русских доходных домов и американских 
+              мотелей, которые ещё сотни лет назад предлагали непри
+              вередливым путешественникам недорогое место для 
+              ночёвки.Первый хостел в сегодняшнем значении этого 
+              слова был основан в начале
+            </div>
+          </div>
+        </div>
         <div class="response-item">
           <div class="author-photo"><img src="images/response-photo.png" alt="Виктория Николаева"/></div>
           <div class="response-container">
@@ -220,4 +271,9 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/datedropper.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
